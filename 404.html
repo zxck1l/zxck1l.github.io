@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>404 - Страница не найдена</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            background-color: #121212;
+            color: #e0e0e0;
+            font-family: Arial, sans-serif;
+        }
+        .error-container {
+            text-align: center;
+        }
+        .error-code {
+            font-size: 96px;
+            font-weight: bold;
+            color: #6a0dad;
+            animation: pulse 2s infinite;
+        }
+        .error-message {
+            font-size: 24px;
+            margin: 20px 0;
+        }
+        .home-link {
+            color: #bb86fc;
+            text-decoration: none;
+            font-size: 18px;
+            border: 2px solid #bb86fc;
+            padding: 10px 20px;
+            border-radius: 5px;
+            transition: all 0.3s ease;
+        }
+        .home-link:hover {
+            background-color: #bb86fc;
+            color: #121212;
+        }
+        @keyframes pulse {
+            0%, 100% {
+                transform: scale(1);
+                opacity: 1;
+            }
+            50% {
+                transform: scale(1.1);
+                opacity: 0.8;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="error-container">
+        <div class="error-code">404</div>
+        <div class="error-message">Страница не найдена</div>
+        <a href="index.html" class="home-link">Вернуться на главную</a>
+    </div>
+</body>
+</html>
