@@ -15,6 +15,7 @@
             background-color: #121212;
             color: #e0e0e0;
             font-family: Arial, sans-serif;
+            overflow: hidden;
         }
         .error-container {
             text-align: center;
@@ -23,7 +24,7 @@
             font-size: 96px;
             font-weight: bold;
             color: #6a0dad;
-            animation: pulse 2s infinite;
+            animation: slide-spin 2s ease-in-out;
         }
         .error-message {
             font-size: 24px;
@@ -42,14 +43,17 @@
             background-color: #bb86fc;
             color: #121212;
         }
-        @keyframes pulse {
-            0%, 100% {
-                transform: scale(1);
-                opacity: 1;
+        @keyframes slide-spin {
+            0% {
+                transform: translateY(-100%) rotate(0deg);
+                opacity: 0;
             }
             50% {
-                transform: scale(1.1);
-                opacity: 0.8;
+                opacity: 1;
+            }
+            100% {
+                transform: translateY(0) rotate(360deg);
+                opacity: 1;
             }
         }
     </style>
